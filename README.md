@@ -11,17 +11,29 @@ It is designed to be flexible so you can experiment with your ownhand-drawn trai
 ## Repository Structure
 
 lobete-nft-generator/
+
 │
+
 ├── lobeteNFTGenerator.py # Main Python code to generate the basic NFTs
+
 ├── lobeteNFTGenerator.ipynb # Jupiter notebook version for divided execution control
+
 │
+
 ├── /metadata/ # Generated NFT metadata (empty by default)
+
 │ └── all-traits.json # Generated traits for 100 NFTs used in tests
+
 │
+
 ├── /lobetesIMG/
+
 │ ├── /N-Trait/ # Several folders, one for each trait type, in order of layers. 
+
 │ └── Z-FINAL/ # Generated NFT images (empty by default)
+
 │
+
 └── README.md
 
 
