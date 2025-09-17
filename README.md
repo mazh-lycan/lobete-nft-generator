@@ -42,8 +42,8 @@ lobete-nft-generator/
 A demo batch of **100 Lobetes NFT** has been generated in order to showcase the usage of the generator.  
 These are hosted on **IPFS** to keep the repository lightweight and the images and metadata distributed and not centralized:  
 
-- [IPFS link to demo images (100)](ipfs://<CID>/images/)  
-- [IPFS link to demo metadata (100)](ipfs://<CID>/json/)  
+- [IPFS link to demo images (100)](ipfs://QmeifN3j72p3DfAc1RoWfTVD36ihtc96y1osB5LrHTwDjH)  
+- [IPFS link to demo metadata (100)](ipfs://QmUWWtRZzK12Us4Jkda5SPkGD787C28sCtwtsoYzifAZyi)  
 
 *TODO (Replace `<CID>` with the uploaded folder CID once available.)*
 
