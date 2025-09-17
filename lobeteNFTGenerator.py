@@ -541,7 +541,7 @@ f = open('./metadata/all-traits.json',)
 data = json.load(f)
 
 
-IMAGES_BASE_URI = "https://ipfs.io/ipfs/QmYFKTLD6fM7MTapaxXP4ZJiTqF8dfgi3Fwmp3vnynaqNM/"
+IMAGES_BASE_URI = "https://ipfs.io/ipfs/QmeifN3j72p3DfAc1RoWfTVD36ihtc96y1osB5LrHTwDjH/"
 PROJECT_NAME = "Lobetes NFT"
 
 def getAttribute(key, value):
