@@ -534,3 +534,45 @@ for item in all_images:
     rgb_im = comC.convert('RGB')
     file_name = str(item["tokenId"]) + ".png"
     rgb_im.save("./lobetesIMG/Z-FINAL/" + file_name)
+
+    #### Generate Metadata for each Image    
+
+f = open('./metadata/all-traits.json',) 
+data = json.load(f)
+
+
+IMAGES_BASE_URI = "https://ipfs.io/ipfs/QmYFKTLD6fM7MTapaxXP4ZJiTqF8dfgi3Fwmp3vnynaqNM/"
+PROJECT_NAME = "Lobetes NFT"
+
+def getAttribute(key, value):
+    return {
+        "trait_type": key,
+        "value": value
+    }
+for i in data:
+    token_id = i['tokenId']
+    token = {
+        "name": PROJECT_NAME + ' ' + str(token_id),
+        "description": 'A punk wolf-rat Lobete roaming the blockchain.',
+        "image": IMAGES_BASE_URI + str(token_id) + '.png',
+        #"tokenId": token_id,
+        "attributes": []
+    }
+    token["attributes"].append(getAttribute("BG", i["BG"]))
+    token["attributes"].append(getAttribute("Cuerpo", i["Cuerpo"]))
+    token["attributes"].append(getAttribute("Pelaje", i["Pelaje"]))
+    token["attributes"].append(getAttribute("Cola", i["Cola"]))
+    token["attributes"].append(getAttribute("Boca", i["Boca"]))
+    token["attributes"].append(getAttribute("Nariz", i["Nariz"]))
+    token["attributes"].append(getAttribute("Ojos", i["Ojos"]))
+    token["attributes"].append(getAttribute("Pelo", i["Pelo"]))
+    token["attributes"].append(getAttribute("Oreja", i["Oreja"]))
+    token["attributes"].append(getAttribute("Collar", i["Collar"]))
+    token["attributes"].append(getAttribute("Ropa", i["Ropa"]))
+    token["attributes"].append(getAttribute("Manos", i["Manos"]))
+    token["attributes"].append(getAttribute("Pulseras", i["Pulseras"]))
+    token["attributes"].append(getAttribute("Botas", i["Botas"]))
+    
+    with open('./metadata/' + str(token_id), 'w') as outfile:
+        json.dump(token, outfile, indent=4)
+f.close() 
